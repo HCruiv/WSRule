@@ -30,6 +30,19 @@
         <label class="filter-label">Pencarian </label>
         <input type="text" id="searchInput" class="filter-input" placeholder="Cari nama...">
       </div>
+
+      <div class="filter-row">
+        <label class="filter-label">Shift </label>
+        <select id="searchInput" class="filter-input">
+          <option value="">Shift</option>
+          <option value="1">Shift A</option>
+          <option value="2">Shift B</option>
+          <option value="3">Shift C</option>
+          <option value="4">Shift D</option>
+          <option value="5">Harian</option>
+        </select>
+      </div>
+
       <div class="filter-row">
         <label class="filter-label">Periode   </label>
         <select id="bulanDropdown" class="filter-input">
@@ -50,16 +63,9 @@
 
         <select id="tahunDropdown" class="filter-input">
           <option value="">Tahun</option>
-          <script>
-            const tahunDropdown = document.currentScript.parentElement.querySelector('#tahunDropdown');
-            const currentYear = new Date().getFullYear();
-            for (let y = currentYear - 5; y <= currentYear + 1; y++) {
-              const option = document.createElement('option');
-              option.value = y;
-              option.textContent = y;
-              tahunDropdown.appendChild(option);
-            }
-          </script>
+          <option value="">2024</option>
+          <option value="">2025</option>
+          <option value="">2026</option>
         </select>
       </div>
     </div>
