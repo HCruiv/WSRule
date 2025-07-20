@@ -15,17 +15,23 @@ body {
 
 .login-wrapper {
   width: 100%;
-  max-width: 400px;
+  max-width: 600px; /* dari 400px jadi 500px */
   padding: 20px;
 }
 
 .login-box {
   background: #fff;
-  padding: 30px 40px;
+  padding: 50px 40px; /* lebih tinggi padding atas dan bawah */
   border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 25px rgba(20, 3, 3, 0.2);
   text-align: center;
+  min-height: 520px; /* cukup tinggi */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
+
+
 
 .login-box h2 {
   margin-bottom: 10px;
@@ -42,7 +48,7 @@ input {
   width: 100%;
   padding: 12px;
   margin: 10px 0;
-  border: 1px solid #ccc;
+  border: 1px solid #0b0909;
   border-radius: 8px;
   font-size: 14px;
   transition: border 0.3s;
