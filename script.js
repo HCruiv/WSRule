@@ -8,7 +8,7 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
   const users = {
     "admin@pertamina.com": { password: "admin123", role: "admin" },
     "hc@pertamina.com": { password: "hc123", role: "hc" },
-    "atasan@[ertamina].com": { password: "atasan123", role: "atasan" }
+    "atasan@pertamina.com": { password: "atasan123", role: "atasan" }
   };
 
   if (users[email] && users[email].password === password) {

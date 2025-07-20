@@ -25,13 +25,22 @@ let currentPage = 1;
 const rowsPerPage = 10;
 
 function renderTable() {
+  const searchValue = document.getElementById("searchInput").value.toLowerCase();
+  const shiftValue = document.getElementById("shiftDropdown").value;
+
+  const filteredData = dataPekerja.filter(item => {
+    const matchesSearch = item.nama.toLowerCase().includes(searchValue) || item.nopek.includes(searchValue);
+    const matchesShift = shiftValue === "" || item.shift === shiftValue;
+    return matchesSearch && matchesShift;
+  });
+
   const tableBody = document.getElementById("tableBody");
   const pageInfo = document.getElementById("pageInfo");
   tableBody.innerHTML = "";
 
   const start = (currentPage - 1) * rowsPerPage;
   const end = start + rowsPerPage;
-  const pageData = dataPekerja.slice(start, end);
+  const pageData = filteredData.slice(start, end);
 
   pageData.forEach((item, index) => {
     const row = document.createElement("tr");
@@ -46,14 +55,13 @@ function renderTable() {
     tableBody.appendChild(row);
   });
 
-  pageInfo.textContent = `Halaman ${currentPage} dari ${Math.ceil(dataPekerja.length / rowsPerPage)}`;
+  const totalPages = Math.ceil(filteredData.length / rowsPerPage);
+  pageInfo.textContent = `Halaman ${currentPage} dari ${totalPages || 1}`;
 }
 
 document.getElementById("nextBtn").addEventListener("click", () => {
-  if (currentPage * rowsPerPage < dataPekerja.length) {
-    currentPage++;
-    renderTable();
-  }
+  currentPage++;
+  renderTable();
 });
 
 document.getElementById("prevBtn").addEventListener("click", () => {
@@ -61,6 +69,17 @@ document.getElementById("prevBtn").addEventListener("click", () => {
     currentPage--;
     renderTable();
   }
+});
+
+// Event listener untuk filter
+document.getElementById("searchInput").addEventListener("input", () => {
+  currentPage = 1;
+  renderTable();
+});
+
+document.getElementById("shiftDropdown").addEventListener("change", () => {
+  currentPage = 1;
+  renderTable();
 });
 
 window.onload = renderTable;

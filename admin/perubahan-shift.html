@@ -16,7 +16,6 @@
       <li><a href="dashboard.html"><span>🏠</span> Dashboard</a></li>
       <li><a href="jadwal-kerja.html"><span>📆</span> Jadwal Kerja</a></li>
       <li class="active"><a href="perubahan-shift.html"><span>🔁</span> Perubahan Shift</a></li>
-      <li><a href="histori-pengajuan.html"><span>📜</span> Histori Pengajuan</a></li>
       <li><a href="../index.html"><span>🚪</span> Logout</a></li>
     </ul>
   </div>
@@ -40,6 +39,16 @@
           <option value="Shift C">Shift C</option>
           <option value="Shift D">Shift D</option>
           <option value="Harian">Harian</option>
+        </select>
+      </div>
+
+      <div class="filter-row">
+        <label class="filter-label">Status</label>
+        <select id="statusDropdown" class="filter-input">
+          <option value="">Pilih Status</option>
+          <option value="Waiting Approval">Waiting Approval</option>
+          <option value="Approved">Approved</option>
+          <option value="Reject by System">Reject by System</option>
         </select>
       </div>
 
@@ -70,6 +79,11 @@
       </div>
     </div>
 
+    <div class="ajukan-wrapper">
+      <a href="ajukan-perubahan.html" class="btn-ajukan-perubahan">Ajukan Perubahan</a>
+    </div>
+
+
     <!-- Table Section -->
     <div class="table-container">
       <table>
@@ -81,6 +95,8 @@
             <th>Shift</th>
             <th>TMT</th>
             <th>End Date</th>
+            <th>Tanggal Pengajuan</th>
+            <th>Status</th>
             <th>Action</th>
           </tr>
         </thead>

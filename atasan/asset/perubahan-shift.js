@@ -47,7 +47,7 @@ function renderTable() {
       <td>${item.status}</td>
       <td>
         <button class="btn-ajukan" onclick="window.location.href='ajukan-perubahan.html?nopek=${item.nopek}'">
-          Edit
+          Approve
         </button>
       </td>
     `;

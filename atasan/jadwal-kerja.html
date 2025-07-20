@@ -14,8 +14,8 @@
     </div>
     <ul class="menu">
       <li><a href="dashboard.html"><span>🏠</span> Dashboard</a></li>
-      <li><a href="jadwal-kerja.html"><span>📆</span> Jadwal Kerja</a></li>
-      <li class="active"><a href="perubahan-shift.html"><span>🔁</span> Perubahan Shift</a></li>
+      <li class="active"><a href="jadwal-kerja.html"><span>📆</span> Jadwal Kerja</a></li>
+      <li><a href="perubahan-shift.html"><span>🔁</span> Perubahan Shift</a></li>
       <li><a href="../index.html"><span>🚪</span> Logout</a></li>
     </ul>
   </div>
@@ -26,14 +26,14 @@
     <!-- Filter Section -->
     <div class="filter-section">
       <div class="filter-row">
-        <label class="filter-label">Pencarian</label>
+        <label class="filter-label">Pencarian </label>
         <input type="text" id="searchInput" class="filter-input" placeholder="Cari nama atau nopek...">
       </div>
 
       <div class="filter-row">
-        <label class="filter-label">Shift</label>
+        <label class="filter-label">Shift </label>
         <select id="shiftDropdown" class="filter-input">
-          <option value="">Pilih Shift</option>
+          <option value="">Shift</option>
           <option value="Shift A">Shift A</option>
           <option value="Shift B">Shift B</option>
           <option value="Shift C">Shift C</option>
@@ -43,17 +43,7 @@
       </div>
 
       <div class="filter-row">
-        <label class="filter-label">Status</label>
-        <select id="statusDropdown" class="filter-input">
-          <option value="">Pilih Status</option>
-          <option value="Waiting Approval">Waiting Approval</option>
-          <option value="Approved">Approved</option>
-          <option value="Reject by System">Reject by System</option>
-        </select>
-      </div>
-
-      <div class="filter-row">
-        <label class="filter-label">Periode</label>
+        <label class="filter-label">Periode   </label>
         <select id="bulanDropdown" class="filter-input">
           <option value="">Bulan</option>
           <option value="1">Januari</option>
@@ -72,19 +62,14 @@
 
         <select id="tahunDropdown" class="filter-input">
           <option value="">Tahun</option>
-          <option value="2024">2024</option>
-          <option value="2025">2025</option>
-          <option value="2026">2026</option>
+          <option value="">2024</option>
+          <option value="">2025</option>
+          <option value="">2026</option>
         </select>
       </div>
     </div>
 
-    <div class="ajukan-wrapper">
-      <a href="#" class="btn-ajukan-perubahan">Approve All</a>
-    </div>
-
-
-    <!-- Table Section -->
+    <!-- Tabel -->
     <div class="table-container">
       <table>
         <thead>
@@ -95,28 +80,23 @@
             <th>Shift</th>
             <th>TMT</th>
             <th>End Date</th>
-            <th>Tanggal Pengajuan</th>
-            <th>Status</th>
-            <th>Action</th>
           </tr>
         </thead>
         <tbody id="tableBody">
-          <!-- Data akan dimuat dari data-kerja.js -->
+          <!-- Data dari data-kerja.js -->
         </tbody>
-
-        
       </table>
 
       <!-- Pagination -->
       <div class="pagination">
-        <button id="prevBtn" class="pagination-btn">Previous</button>
-        <span id="pageInfo" class="page-info">Page 1 of 1</span>
-        <button id="nextBtn" class="pagination-btn"> Next</button>
+        <button id="prevBtn">Sebelumnya</button>
+        <span id="pageInfo"></span>
+        <button id="nextBtn">Berikutnya</button>
       </div>
     </div>
   </div>
 
-  <!-- Script -->
-  <script src="asset/perubahan-shift.js"></script>
+  <!-- Include script untuk data dan logika filter/pagination -->
+  <script src="../admin/asset/data-kerja.js"></script>
 </body>
 </html>
