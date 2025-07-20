@@ -36,10 +36,14 @@ body {
 }
 
 .sidebar .logo img {
-  width: 100px;
+  width: 100%;        /* Lebar penuh container */
   height: auto;
+  max-width: 180px;   /* Boleh dibatasi agar tidak terlalu besar */
+  margin: 0 auto;
+  display: block;
   transition: transform 0.3s;
 }
+
 
 .sidebar .logo img:hover {
   transform: scale(1.1);
