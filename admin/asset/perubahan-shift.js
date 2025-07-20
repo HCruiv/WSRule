@@ -4,18 +4,18 @@ const dataPekerja = [
   { nama: "Citra", nopek: "161403", shift: "Shift C", TMT: "2025-07-18", endDate: "2025-07-18" },
   { nama: "Dewi", nopek: "161404", shift: "Shift A", TMT: "2025-07-18", endDate: "2025-07-18" },
   { nama: "Eka", nopek: "161405", shift: "Shift B", TMT: "2025-07-18", endDate: "2025-07-18" },
-  { nama: "Fajar", nopek: "161406", shift: "Shift C", TMT: "2025-07-18", endDate: "2025-07-18" },
+  { nama: "Fajar", nopek: "161406", shift: "Harian", TMT: "2025-07-18", endDate: "2025-07-18" },
   { nama: "Gilang", nopek: "161407", shift: "Shift A", TMT: "2025-07-18", endDate: "2025-07-18" },
   { nama: "Hani", nopek: "161408", shift: "Shift B", TMT: "2025-07-18", endDate: "2025-07-18" },
   { nama: "Indra", nopek: "161409", shift: "Shift C", TMT: "2025-07-18", endDate: "2025-07-18" },
   { nama: "Joko", nopek: "161410", shift: "Shift A", TMT: "2025-07-18", endDate: "2025-07-18" },
-  { nama: "Kiki", nopek: "161411", shift: "Shift B", TMT: "2025-07-18", endDate: "2025-07-18" },
+  { nama: "Kiki", nopek: "161411", shift: "Shift D", TMT: "2025-07-18", endDate: "2025-07-18" },
   { nama: "Lina", nopek: "161412", shift: "Shift C", TMT: "2025-07-18", endDate: "2025-07-18" },
-  { nama: "Maya", nopek: "161413", shift: "Harian", TMT: "2025-07-18", endDate: "2025-07-18" },
+  { nama: "Maya", nopek: "161413", shift: "Shift A", TMT: "2025-07-18", endDate: "2025-07-18" },
   { nama: "Nino", nopek: "161414", shift: "Shift B", TMT: "2025-07-18", endDate: "2025-07-18" },
-  { nama: "Oki", nopek: "161415", shift: "Shift C", TMT: "2025-07-18", endDate: "2025-07-18" },
+  { nama: "Oki", nopek: "161415", shift: "Shift D", TMT: "2025-07-18", endDate: "2025-07-18" },
   { nama: "Putri", nopek: "161416", shift: "Shift A", TMT: "2025-07-18", endDate: "2025-07-18" },
-  { nama: "Qori", nopek: "161417", shift: "Shift D", TMT: "2025-07-18", endDate: "2025-07-18" },
+  { nama: "Qori", nopek: "161417", shift: "Shift B", TMT: "2025-07-18", endDate: "2025-07-18" },
   { nama: "Rizky", nopek: "161418", shift: "Shift C", TMT: "2025-07-18", endDate: "2025-07-18" },
   { nama: "Sari", nopek: "161419", shift: "Shift A", TMT: "2025-07-18", endDate: "2025-07-18" },
   { nama: "Tono", nopek: "161420", shift: "Shift B", TMT: "2025-07-18", endDate: "2025-07-18" }
@@ -23,6 +23,7 @@ const dataPekerja = [
 
 let currentPage = 1;
 const rowsPerPage = 10;
+let filteredData = [...dataPekerja];
 
 function renderTable() {
   const tableBody = document.getElementById("tableBody");
@@ -31,7 +32,7 @@ function renderTable() {
 
   const start = (currentPage - 1) * rowsPerPage;
   const end = start + rowsPerPage;
-  const pageData = dataPekerja.slice(start, end);
+  const pageData = filteredData.slice(start, end);
 
   pageData.forEach((item, index) => {
     const row = document.createElement("tr");
@@ -42,15 +43,38 @@ function renderTable() {
       <td>${item.shift}</td>
       <td>${item.TMT}</td>
       <td>${item.endDate}</td>
+      <td>
+        <button class="btn-ajukan" onclick="window.location.href='ajukan-perubahan.html?nopek=${item.nopek}'">
+          Edit
+        </button>
+      </td>
     `;
     tableBody.appendChild(row);
   });
 
-  pageInfo.textContent = `Halaman ${currentPage} dari ${Math.ceil(dataPekerja.length / rowsPerPage)}`;
+  const totalPages = Math.ceil(filteredData.length / rowsPerPage);
+  pageInfo.textContent = `Page ${currentPage} of ${totalPages}`;
 }
 
+function filterData() {
+  const searchValue = document.getElementById("searchInput").value.toLowerCase();
+  const selectedShift = document.getElementById("shiftDropdown").value;
+
+  filteredData = dataPekerja.filter(item => {
+    const cocokCari = item.nama.toLowerCase().includes(searchValue) || item.nopek.includes(searchValue);
+    const cocokShift = selectedShift === "" || item.shift === selectedShift;
+    return cocokCari && cocokShift;
+  });
+
+  currentPage = 1;
+  renderTable();
+}
+
+document.getElementById("searchInput").addEventListener("input", filterData);
+document.getElementById("shiftDropdown").addEventListener("change", filterData);
+
 document.getElementById("nextBtn").addEventListener("click", () => {
-  if (currentPage * rowsPerPage < dataPekerja.length) {
+  if ((currentPage * rowsPerPage) < filteredData.length) {
     currentPage++;
     renderTable();
   }
@@ -63,4 +87,6 @@ document.getElementById("prevBtn").addEventListener("click", () => {
   }
 });
 
-window.onload = renderTable;
+window.onload = () => {
+  renderTable();
+};
