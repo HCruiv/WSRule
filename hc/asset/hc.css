@@ -316,7 +316,7 @@ select, input[type="text"] {
 }
 
 .btn-ajukan-perubahan {
-  background-color: #e3342f;
+  background-color: #128700;
   color: #fff;
   padding: 10px 18px;
   border-radius: 6px;
@@ -326,5 +326,5 @@ select, input[type="text"] {
 }
 
 .btn-ajukan-perubahan:hover {
-  background-color: #cc1f1a;
+  background-color: #006214;
 }
