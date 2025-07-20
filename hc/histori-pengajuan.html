@@ -27,6 +27,44 @@
     </ul>
   </div>
 
+  <div class="main-content">
 
+
+    <div class="user-info-bar">
+      <div class="user-icon">👤</div>
+      <div class="user-name">Halo, <strong>Atasan</strong></div>
+    </div>
+
+    <h1>Histori Perubahan Shift</h1>
+
+    <!-- Tabel -->
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Nama</th>
+            <th>Nopek</th>
+            <th>Shift</th>
+            <th>TMT</th>
+            <th>End Date</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody">
+          <!-- Data dari data-kerja.js -->
+        </tbody>
+      </table>
+
+      <!-- Pagination -->
+      <div class="pagination">
+        <button id="prevBtn">Sebelumnya</button>
+        <span id="pageInfo"></span>
+        <button id="nextBtn">Berikutnya</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Include script untuk data dan logika filter/pagination -->
+  <script src="../admin/asset/data-kerja.js"></script>
 </body>
 </html>
