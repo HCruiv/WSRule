@@ -1,24 +1,24 @@
 const dataPekerja = [
-  { nama: "Andi", nopek: "161401", shift: "Shift A", TMT: "2025-07-18", endDate: "2025-07-18" },
-  { nama: "Budi", nopek: "161402", shift: "Shift B", TMT: "2025-07-18", endDate: "2025-07-18" },
-  { nama: "Citra", nopek: "161403", shift: "Shift C", TMT: "2025-07-18", endDate: "2025-07-18" },
-  { nama: "Dewi", nopek: "161404", shift: "Shift A", TMT: "2025-07-18", endDate: "2025-07-18" },
-  { nama: "Eka", nopek: "161405", shift: "Shift B", TMT: "2025-07-18", endDate: "2025-07-18" },
-  { nama: "Fajar", nopek: "161406", shift: "Shift C", TMT: "2025-07-18", endDate: "2025-07-18" },
-  { nama: "Gilang", nopek: "161407", shift: "Shift A", TMT: "2025-07-18", endDate: "2025-07-18" },
-  { nama: "Hani", nopek: "161408", shift: "Shift B", TMT: "2025-07-18", endDate: "2025-07-18" },
-  { nama: "Indra", nopek: "161409", shift: "Shift C", TMT: "2025-07-18", endDate: "2025-07-18" },
-  { nama: "Joko", nopek: "161410", shift: "Shift A", TMT: "2025-07-18", endDate: "2025-07-18" },
-  { nama: "Kiki", nopek: "161411", shift: "Shift B", TMT: "2025-07-18", endDate: "2025-07-18" },
-  { nama: "Lina", nopek: "161412", shift: "Shift C", TMT: "2025-07-18", endDate: "2025-07-18" },
-  { nama: "Maya", nopek: "161413", shift: "Harian", TMT: "2025-07-18", endDate: "2025-07-18" },
-  { nama: "Nino", nopek: "161414", shift: "Shift B", TMT: "2025-07-18", endDate: "2025-07-18" },
-  { nama: "Oki", nopek: "161415", shift: "Shift C", TMT: "2025-07-18", endDate: "2025-07-18" },
-  { nama: "Putri", nopek: "161416", shift: "Shift A", TMT: "2025-07-18", endDate: "2025-07-18" },
-  { nama: "Qori", nopek: "161417", shift: "Shift D", TMT: "2025-07-18", endDate: "2025-07-18" },
-  { nama: "Rizky", nopek: "161418", shift: "Shift C", TMT: "2025-07-18", endDate: "2025-07-18" },
-  { nama: "Sari", nopek: "161419", shift: "Shift A", TMT: "2025-07-18", endDate: "2025-07-18" },
-  { nama: "Tono", nopek: "161420", shift: "Shift B", TMT: "2025-07-18", endDate: "2025-07-18" }
+  { nama: "Andi", nopek: "161401", shift: "Shift A" },
+  { nama: "Budi", nopek: "161402", shift: "Shift B" },
+  { nama: "Citra", nopek: "161403", shift: "Shift C" },
+  { nama: "Dewi", nopek: "161404", shift: "Shift A" },
+  { nama: "Eka", nopek: "161405", shift: "Shift B" },
+  { nama: "Fajar", nopek: "161406", shift: "Shift C" },
+  { nama: "Gilang", nopek: "161407", shift: "Shift A" },
+  { nama: "Hani", nopek: "161408", shift: "Shift B" },
+  { nama: "Indra", nopek: "161409", shift: "Shift C" },
+  { nama: "Joko", nopek: "161410", shift: "Shift A" },
+  { nama: "Kiki", nopek: "161411", shift: "Shift B" },
+  { nama: "Lina", nopek: "161412", shift: "Shift C" },
+  { nama: "Maya", nopek: "161413", shift: "Harian" },
+  { nama: "Nino", nopek: "161414", shift: "Shift B" },
+  { nama: "Oki", nopek: "161415", shift: "Shift C" },
+  { nama: "Putri", nopek: "161416", shift: "Shift A" },
+  { nama: "Qori", nopek: "161417", shift: "Shift D" },
+  { nama: "Rizky", nopek: "161418", shift: "Shift C" },
+  { nama: "Sari", nopek: "161419", shift: "Shift A" },
+  { nama: "Tono", nopek: "161420", shift: "Shift B" }
 ];
 
 let currentPage = 1;
@@ -49,8 +49,7 @@ function renderTable() {
       <td>${item.nama}</td>
       <td>${item.nopek}</td>
       <td>${item.shift}</td>
-      <td>${item.TMT}</td>
-      <td>${item.endDate}</td>
+      
     `;
     tableBody.appendChild(row);
   });
