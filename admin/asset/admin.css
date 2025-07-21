@@ -353,3 +353,26 @@ select, input[type="text"] {
   font-size: 16px;
   color: #333;
 }
+
+#fotoContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 20px 0;
+}
+
+#fotoContainer img {
+  width: 150px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+#fotoContainer img:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
