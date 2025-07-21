@@ -5,7 +5,7 @@ const dataPekerja = [
   { nama: "Dewi", nopek: "161404", shift: "Shift A", TMT: "2025-07-18", endDate: "2025-07-18", tanggal: "2025-07-18", status: "Waiting Approval" },
   { nama: "Eka", nopek: "161405", shift: "Shift B", TMT: "2025-07-18", endDate: "2025-07-18", tanggal: "2025-07-18", status: "Waiting Approval" },
   { nama: "Fajar", nopek: "161406", shift: "Harian", TMT: "2025-07-18", endDate: "2025-07-18", tanggal: "2025-07-18", status: "Waiting Approval" },
-  { nama: "Gilang", nopek: "161407", shift: "Shift A", TMT: "2025-07-18", endDate: "2025-07-18", tanggal: "2025-04-18", status: "Reject by System" },
+  { nama: "Gilang", nopek: "161407", shift: "Shift A", TMT: "2025-07-18", endDate: "2025-07-18", tanggal: "2025-04-18", status: "Rejected" },
   { nama: "Hani", nopek: "161408", shift: "Shift B", TMT: "2025-07-18", endDate: "2025-07-18", tanggal: "2025-07-18", status: "Waiting Approval" },
   { nama: "Indra", nopek: "161409", shift: "Shift C", TMT: "2025-07-18", endDate: "2025-07-18", tanggal: "2025-07-18", status: "Waiting Approval" },
   { nama: "Joko", nopek: "161410", shift: "Shift A", TMT: "2025-07-18", endDate: "2025-07-18", tanggal: "2025-07-18", status: "Waiting Approval" },
@@ -95,3 +95,10 @@ document.getElementById("prevBtn").addEventListener("click", () => {
 window.onload = () => {
   renderTable();
 };
+
+function toggleForm() {
+  const form = document.getElementById('formPerubahan');
+  if (form) {
+    form.classList.toggle('hidden');
+  }
+}

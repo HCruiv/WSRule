@@ -120,7 +120,7 @@ body {
   border-radius: 16px;
   flex: 1 1 250px;
   min-width: 250px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   text-align: center;
   transition: transform 0.3s, box-shadow 0.3s;
   animation: zoomIn 0.4s ease;
@@ -162,12 +162,12 @@ body {
   background-color: white;
   padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
   transition: box-shadow 0.3s;
 }
 
 .chart:hover {
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
 }
 
 .table-shift {
@@ -176,7 +176,7 @@ body {
   background-color: #fff;
   padding: 15px;
   border-radius: 8px;
-  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s;
 }
 
@@ -257,7 +257,7 @@ table tr:hover {
   flex-direction: column;
   gap: 12px;
   margin: 25px 0;
-  padding-left: 40px; /* posisi agak ke tengah */
+  
 }
 
 .filter-row {
@@ -278,6 +278,7 @@ table tr:hover {
   padding: 6px 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  width: 312px;
 }
 
 #searchInput {
@@ -315,12 +316,12 @@ select, input[type="text"] {
 
 .ajukan-wrapper {
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   margin: 12px 0 20px;
 }
 
 .btn-ajukan-perubahan {
-  background-color: red;
+  background-color: rgb(200, 9, 9);
   color: #fff;
   padding: 10px 18px;
   border-radius: 6px;
@@ -330,7 +331,7 @@ select, input[type="text"] {
 }
 
 .btn-ajukan-perubahan:hover {
-  background-color: #1e00ff;
+  background-color: #ff3232;
 }
 
 

@@ -30,6 +30,55 @@
     </div>
 
     <h1>Perubahan Shift</h1>
+    <!-- 
+    <div class="ajukan-wrapper">
+      <a href="ajukan-perubahan.html" class="btn-ajukan-perubahan">Ajukan Perubahan Shift</a>
+    </div>
+    -->
+
+    <!-- Tombol untuk toggle -->
+<div class="ajukan-wrapper">
+  <button class="btn-ajukan-perubahan" onclick="toggleForm()">Create Perubahan Shift</button>
+</div>
+
+<!-- Formulir (awal tersembunyi) -->
+<div id="formPerubahan" class="form-perubahan hidden">
+  <h2>Create Perubahan Shift</h2>
+  <form>
+    <label for="nama">Nama Pekerja</label>
+    <input type="text" id="nama" name="nama" required />
+
+    <label for="shiftLama">Shift Lama</label>
+    <select id="shiftLama" name="shiftLama">
+      <option>Pagi</option>
+      <option>Siang</option>
+      <option>Malam</option>
+    </select>
+
+    <label for="shiftBaru">Shift Baru</label>
+    <select id="shiftBaru" name="shiftBaru">
+      <option>Pagi</option>
+      <option>Siang</option>
+      <option>Malam</option>
+    </select>
+
+    <label for="tanggal">TMT</label>
+    <input type="date" id="tanggal" name="tanggal" required />
+
+    <label for="tanggal">End Date</label>
+    <input type="date" id="tanggal" name="tanggal" required />
+
+    <!-- <button type="submit" class="btn-submit">Kirim Permohonan</button> -->
+
+    <div class="form-buttons">
+      <button type="button" class="btn-batal" onclick="toggleForm()">Cancel</button>
+      <button type="submit" class="btn-kirim">Submit</button>
+    </div>
+
+  </form>
+</div>
+
+
 
     <!-- Filter Section -->
     <div class="filter-section">
@@ -56,40 +105,14 @@
           <option value="">Pilih Status</option>
           <option value="Waiting Approval">Waiting Approval</option>
           <option value="Approved">Approved</option>
-          <option value="Reject by System">Reject by System</option>
+          <option value="Rejected">Rejected</option>
         </select>
       </div>
 
-      <div class="filter-row">
-        <label class="filter-label">Periode</label>
-        <select id="bulanDropdown" class="filter-input">
-          <option value="">Bulan</option>
-          <option value="1">Januari</option>
-          <option value="2">Februari</option>
-          <option value="3">Maret</option>
-          <option value="4">April</option>
-          <option value="5">Mei</option>
-          <option value="6">Juni</option>
-          <option value="7">Juli</option>
-          <option value="8">Agustus</option>
-          <option value="9">September</option>
-          <option value="10">Oktober</option>
-          <option value="11">November</option>
-          <option value="12">Desember</option>
-        </select>
-
-        <select id="tahunDropdown" class="filter-input">
-          <option value="">Tahun</option>
-          <option value="2024">2024</option>
-          <option value="2025">2025</option>
-          <option value="2026">2026</option>
-        </select>
-      </div>
+      
     </div>
 
-    <div class="ajukan-wrapper">
-      <a href="ajukan-perubahan.html" class="btn-ajukan-perubahan">Ajukan Perubahan Shift</a>
-    </div>
+    
 
 
     <!-- Table Section -->

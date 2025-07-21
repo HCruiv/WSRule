@@ -257,7 +257,7 @@ table tr:hover {
   flex-direction: column;
   gap: 12px;
   margin: 25px 0;
-  padding-left: 40px; /* posisi agak ke tengah */
+  /* padding-left: 40px;  posisi agak ke tengah */
 }
 
 .filter-row {
@@ -278,6 +278,7 @@ table tr:hover {
   padding: 6px 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  width: 312px;
 }
 
 #searchInput {
@@ -315,7 +316,7 @@ select, input[type="text"] {
 
 .ajukan-wrapper {
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   margin: 12px 0 20px;
 }
 
@@ -375,4 +376,116 @@ select, input[type="text"] {
 #fotoContainer img:hover {
   transform: scale(1.05);
   cursor: pointer;
+}
+
+
+/* FORM CREATE*/
+/* Tombol Ajukan */
+.ajukan-wrapper {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.btn-ajukan-perubahan {
+  background-color: #0056b3;
+  color: white;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn-ajukan-perubahan:hover {
+  background-color: #007bff;
+}
+
+/* Formulir */
+.form-perubahan {
+  max-width: 100%;
+  margin: 30px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.form-perubahan h2 {
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.form-perubahan label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.form-perubahan input,
+.form-perubahan select,
+.form-perubahan textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.form-perubahan .btn-submit {
+  margin-top: 20px;
+  width: 100%;
+  background-color: #28a745;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.form-perubahan .btn-submit:hover {
+  background-color: #1e7e34;
+}
+
+/* Sembunyikan default */
+.hidden {
+  display: none;
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px; /* memberi jarak antar tombol */
+  margin-top: 20px;
+}
+
+.btn-batal,
+.btn-kirim {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-batal {
+  background-color: #ccc;
+  color: #333;
+}
+
+.btn-batal:hover {
+  background-color: #bbb;
+}
+
+.btn-kirim {
+  background-color: green;
+  color: #fff;
+}
+
+.btn-kirim:hover {
+  background-color: rgb(30, 173, 30);
 }
