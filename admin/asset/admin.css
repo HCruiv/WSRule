@@ -45,9 +45,6 @@ body {
 }
 
 
-.sidebar .logo img:hover {
-  transform: scale(1.1);
-}
 
 .sidebar .menu {
   list-style: none;
@@ -133,7 +130,7 @@ body {
 
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
 }
 
 .card h3 {
@@ -167,7 +164,7 @@ body {
 }
 
 .chart:hover {
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
 }
 
 .table-shift {
@@ -233,7 +230,7 @@ table {
   background: white;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
 }
 
 table th, table td {
@@ -408,7 +405,7 @@ select, input[type="text"] {
   border: 1px solid #ccc;
   border-radius: 8px;
   background-color: #f9f9f9;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
 }
 
 .form-perubahan h2 {
