@@ -6,12 +6,13 @@
 }
 
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   display: flex;
   background-color: #ffffff;
   height: 100vh;
   overflow: hidden;
 }
+
 
 /* SIDEBAR */
 .sidebar {
